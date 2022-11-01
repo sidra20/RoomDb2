@@ -15,15 +15,19 @@ abstract class AppDatabase:RoomDatabase() {
 
         fun getDatabase(context: Context):AppDatabase
         {
-            @Volatile
             if(instance==null)
             {
 
                 synchronized(this)
                 {
-                    instance = Room.databaseBuilder(context.applicationContext,
-                    AppDatabase::class.java,
-                    "db").build()
+
+
+                    instance = Room.databaseBuilder(
+                        context.applicationContext,
+                        AppDatabase::class.java,
+                        "db"
+                    ).allowMainThreadQueries()
+                        .build()
                 }
             }
             return instance!!

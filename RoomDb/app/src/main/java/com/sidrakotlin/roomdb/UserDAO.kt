@@ -20,4 +20,6 @@ interface UserDAO {
 
     @Query("SELECT * FROM user")
     fun getAll():MutableList<UserEntity>
+
+
 }

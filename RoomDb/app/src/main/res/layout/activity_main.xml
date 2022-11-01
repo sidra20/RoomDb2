@@ -65,6 +65,13 @@
             android:textColor="@color/black"
             android:fontFamily="sans-serif-black"/>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/userRv"
+            tools:listitem="@layout/user_item"
+            tools:itemCount="2"/>
 
 
     </LinearLayout>
